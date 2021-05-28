@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane minHeight="700.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gameController">
+   <top>
+   </top>
+   <center>
+      <GridPane prefHeight="392.0" prefWidth="991.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="495.0" minWidth="10.0" prefWidth="203.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="495.0" minWidth="10.0" prefWidth="203.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="495.0" minWidth="10.0" prefWidth="203.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="285.0" minHeight="0.0" prefHeight="53.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="580.0" minHeight="10.0" prefHeight="258.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="594.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="989.0" minHeight="10.0" prefHeight="216.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Player:" underline="true">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="pcard0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="pcard1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="pcard2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="pcard3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="pcard4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="pcard5" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dealer:" underline="true" GridPane.rowIndex="2">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="74.0" prefWidth="1000.0" spacing="20.0" GridPane.rowIndex="3">
+               <children>
+                  <ImageView fx:id="dcard0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dcard1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dcard2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dcard3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dcard4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dcard5" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="status" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your move!" GridPane.columnIndex="2">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="playerScore" layoutX="20.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score:" underline="true" GridPane.columnIndex="1">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="dealerScore" strokeType="OUTSIDE" strokeWidth="0.0" text="Score: ?" underline="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="17.0" prefWidth="200.0" spacing="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="hit" minHeight="100.0" minWidth="200.0" mnemonicParsing="false" onAction="#handleHit" text="Hit" />
+            <Button fx:id="stand" minHeight="100.0" minWidth="200.0" mnemonicParsing="false" onAction="#handleStand" text="Stand" />
+            <Button fx:id="tryAgain" minHeight="100.0" minWidth="200.0" mnemonicParsing="false" onAction="#restartGame" text="Try again" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="100.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>
